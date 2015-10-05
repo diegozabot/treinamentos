@@ -18,6 +18,11 @@
     font-size: 2em;
 }
 
+.icon-4x {
+    font-size: 2em;
+    margin-left: 10px;
+}
+
 .icon-link {
     margin-right: 10px;
 }
@@ -40,4 +45,8 @@
 
 .entrepreneurship-color {
     color: #7cb124;
+}
+
+.tagging-color{
+    color: #004060;
 }
