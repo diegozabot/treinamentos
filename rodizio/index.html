@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+
+		<title>Rodízio DGP S02E02</title>
+
+		<meta name="description" content="Apresentação da gerência de Provisão - DPG">
+		<meta name="author" content="Marino Hohenheim - InfoJr UFBA">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="../vendor/assets/css/reveal.min.css">
+        <!-- <link rel="stylesheet" href="../assets/css/theme/infojr.css" id="theme"> -->
+		<link rel="stylesheet" href="../vendor/assets/css/theme/black.css" id="theme">
+
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="../vendor/assets/lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = '../vendor/assets/css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="reveal">
+
+			<div class="slides">
+				<section>
+					<h1>Rodízio DGP</h1>
+					<h1>S02E02</h1>
+					<h3>Provisão</h3>
+					<p>
+						<small>Powered By Biel's Team</small>
+					</p>
+				</section>
+
+				<!-- Organograma Plano de Cargos -->
+				<section data-background="assets/img/organograma.jpg">
+				</section>
+
+				<!-- Atribuições GP (Review) -->
+				<section data-markdown>
+					<script type="text/template">
+
+```
+gerencia = new Provisão;
+gerencia.preparePluguinfo();
+gerencia.selectGroupDynamics();
+gerencia.engageEnterviews();
+trainees = new Trainee(gerencia.getListDiscussed());
+gerencia.escortMentoring();
+async execute(new AD());
+```
+					</script>
+				</section>
+
+				<section>
+					<section id="atribuicoes">
+						<h3>Competências e Atribuições do Gerente de Provisão</h3>
+						<ul>
+							<p class="fragment">Comunicação Interpessoal</p>
+							<p class="fragment">Seleção de pessoas</p>
+							<p class="fragment">Mentoring <span class="fragment fade-out">e Coaching</span></p>
+							<p class="fragment">Aplicação da Avaliação de Desempenho</p>
+							<p class="fragment">Integração de Pessoas</p>
+						</ul>
+					</section>
+					<section data-markdown id="literatura">
+						<script type="text/template">
+							#### Literatura
+
+							* Planejamento, Recrutamento e Seleção de Pessoal - Chiavenato <!-- .element: class="fragment" -->
+								* Inspiração para o PDI de Provisão em 2014 <!-- .element: class="fragment" -->
+							* Gestão de pessoas - Chiavenato <!-- .element: class="fragment" -->
+								* Mentoring <!-- .element: class="fragment" -->
+
+						</script>
+					</section>
+				</section>
+
+				<section id="literatura">
+					<section>
+						<h3>Perguntas?</h3>
+					</section>
+					<section>
+						<!-- este espaço foi deixado em branco intecionalmente -->
+					</section>
+				</section>
+
+			</div>
+
+		</div>
+
+        <script src="../vendor/assets/lib/js/head.min.js"></script>
+        <script src="../vendor/assets/js/reveal.min.js"></script>
+
+        <script>
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: '../vendor/assets/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../vendor/assets/js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../vendor/assets/js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../vendor/assets/js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../vendor/assets/js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../vendor/assets/js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+        </script>
+    </body>
+</html>
