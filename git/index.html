@@ -67,7 +67,7 @@
                     <img src="img/linus.jpg" height="366" width="366" alt="linus">
                     <div class="fragment">
                         <h2>Linus Torvalds</h2>
-                        <p>Um dos criadores do linux</p>
+                        <p>Criador do linux</p>
                     </div>
                 </section>
 
@@ -82,13 +82,44 @@
                     <img src="img/version-control-3.png" height="240" width="337" alt="controle de versão">
                 </section>
 
+                <section>
+                    <h2>O que veremos hoje?</h2>
+                    <ol>
+                        <li>Iniciar o seu projeto</li>
+                        <h5>init, config</h5>
+                        <li>Modificando e incrementando o seu projeto</li>
+                        <h5>status, add, commit...</h5>
+                        <li>Trabalhando com repositórios remotos</li>
+                        <h5>clone, pull, push, add remote</h5>
+                        <li>Adicionando recursos e trabalhando em grupo utilizando branches</li>
+                        <h5>branch, checkout, merge</h5>
+                        <li>Usando o Github</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <section data-background="img/death-star.jpg">
+                        <h2>A missão: construir a estrela da morte</h2>
+                    </section>
+
+                    <section>
+                        <h3>Nosso mascote</h3>
+                        <img src="img/stormtroopocat.png" height="500" alt="stormtroopocat">
+                        <h3>Stormtroopocat</h3>
+                    </section>
+
+                    <section data-background="img/aventura.jpg">
+                        <h2>A missão: criar uma aventura</h2>
+                    </section>
+                </section>
+
                 <section data-markdown contenteditable>
                         ## Inicializando o git
 
                         Inicialize seu projeto
                         ```
-                        $ mkdir choose-your-adventure
-                        $ cd choose-your-adventure
+                        $ mkdir estrela-da-morte
+                        $ cd estrela-da-morte
                         $ git init
                         ```
                         Configure o seu usuário do git
@@ -105,7 +136,7 @@
                     <h3 style="color: #c0392b">Método</h3>
                     <p>Iniciar um repositório</p>
                     <p>Configurar seu usuário</p>
-                    <p>Escrever um arquivo adventure.md</p>
+                    <p>Escrever um arquivo ponte-de-comando.md</p>
                 </section>
 
                 <section data-background="img/flow.gif">
@@ -135,14 +166,14 @@ $git status
 # Initial commit
 # Untracked files:(use "git add <!--file-->..." to include in what will be committed)
 #
-# adventure.md
+# ponte-de-comando.md
                     </code></pre>
                 </section>
                 <section>
                     <h2>Adicionando ao palco</h2>
                     <p>Devemos começar a rastrear as mudanças</p>
                     <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-$git add adventure.md
+$git add ponte-de-comando.md
 $git status
 # On branch master
 #
@@ -150,7 +181,7 @@ $git status
 # Changes to be commited:
 #    (use "git rm --cached <"file">..." to unstage)
 #
-#   new file: adventure.md
+#   new file: ponte-de-comando.md
                     </code></pre>
                 </section>
                 <section>
@@ -207,7 +238,7 @@ index   9d1d09d..61f26f8    100644
 +
 +Andando pela rua, você vê ao longe um gnomo carregando uma sacola cheia de ouro
 +a) Você segue o gnomo [(vá para 2)](2.md)
-$   git add adventure.md
+$   git add ponte-de-comando.md
 $   git diff
                     </code></pre>
                 </section>
@@ -221,11 +252,11 @@ $   git status
 #   Changes to  be  committed:
 #           (use    "git    reset   HEAD    <file>..."  to  unstage)
 #
-# modified:         adventure.md
+# modified:         ponte-de-comando.md
 #
-$   git reset   HEAD    adventure.md
+$   git reset   HEAD    ponte-de-comando.md
 Unstaged    changes after   reset:
-M adventure.md
+M ponte-de-comando.md
                     </code></pre>
                 </section>
 
@@ -240,10 +271,10 @@ $   git status
 #           (use    "git    checkout    --  <file>..."  to  discard changes in  working
 directory)
 #
-# modified:         adventure.md
+# modified:         ponte-de-comando.md
 #
 no  changes added   to  commit  (use    "git    add"    and/or  "git    commit  -a")
-$   git checkout    --  adventure.md
+$   git checkout    --  ponte-de-comando.md
 $   git status
                     </code></pre>
                 </section>
@@ -258,7 +289,7 @@ $   git status
 #   Changes to  be  committed:
 #           (use    "git    reset   HEAD    <file>..."  to  unstage)
 #
-# modified:         adventure.md
+# modified:         ponte-de-comando.md
 # new   file:           2.md
 #
                     </code></pre>
@@ -271,14 +302,6 @@ $   git status
 $   git add dungeon_new.html
 $   git commit  --amend -m  "Adding new option"
                     </code></pre>
-                    <p>Para que as pessoas peguem as modificações do repositório remoto</p>
-                    <pre><code data-trim contenteditable>
-$   git pull
-                    </code></pre>
-                    <p>Para que as pessoas peguem o repositório remoto</p>
-                    <pre><code data-trim contenteditable>
-$   git clone   https://github.com/<"user">/<"project">.git [<"folder">]
-                    </code></pre>
                 </section>
 
                 <section data-background="img/dogs-sharing.gif">
@@ -288,6 +311,18 @@ $   git clone   https://github.com/<"user">/<"project">.git [<"folder">]
                 <section>
                     <img src="img/github-logo.jpg" alt="github">
                     <h2>Github</h2>
+                </section>
+
+                <section>
+                    <h2>Trabalhando com um repositório existente</h2>
+                    <p>Para clonar o repositório remoto</p>
+                    <pre><code data-trim contenteditable>
+$   git clone   https://github.com/<"user">/<"project">.git [<"folder">]
+                    </code></pre>
+                    <p>Para atualizar o repositório local com relação ao repositório remoto</p>
+                    <pre><code data-trim contenteditable>
+$   git pull
+                    </code></pre>
                 </section>
 
                 <section>
